@@ -8,17 +8,13 @@ var password = document.getElementById("password")
 var creat = document.getElementById("create")
 var log = document.getElementById("log")
 var forget = document.getElementById("forget")
-<<<<<<< HEAD
 
 
-creat.addEventListener("click", function(){
-=======
 var email_login = document.getElementById("email-login")
 var password_login = document.getElementById("password-login")
 
 creat.addEventListener("click", function(){
   event.preventDefault()
->>>>>>> 25c8f99 (form)
     createUserWithEmailAndPassword(auth, email.value, password.value, usenam.value0)
    .then((userCredential) => {
     // Signed up 
@@ -45,13 +41,8 @@ creat.addEventListener("click", function(){
     
 
 log.addEventListener("click", function(){
-<<<<<<< HEAD
-    
-    signInWithEmailAndPassword(auth, email.value, password.value)
-=======
     event.preventDefault()
     signInWithEmailAndPassword(auth, email_login.value, password_login.value)
->>>>>>> 25c8f99 (form)
   .then((userCredential) => {
 
     // Signed in 
@@ -73,15 +64,11 @@ log.addEventListener("click", function(){
 })
 
 forget.addEventListener("click", function(){
-<<<<<<< HEAD
-
-    sendPasswordResetEmail(auth, email.value)
-=======
   event.preventDefault()
     sendPasswordResetEmail(auth, email_login.value)
->>>>>>> 25c8f99 (form)
   .then(() => {
     // Password reset email sent!
+    alert("Password reset email sent!")
     // ..
   })
   .catch((error) => {
